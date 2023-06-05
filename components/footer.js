@@ -147,20 +147,20 @@ const Footer = ({ footerProp }) => {
                   </b>
                   <div className="navigate">
                     <div className="navigate-links">
-                      {footerProp.attributes.navigateLinksLeft.map((value, index) => (
+                      {footerProp.attributes.navigateLinksLeft?.map((value, index) => (
                         <div className="navigate-sec1" key={`left${index}`}>
                           <a href={value.URL} key={`left-links${index}`}>{value.Label}</a>
                         </div>
                       ))}
-                      <div className="navigate-sec1"><a onClick={onAddClick}>CONTACT</a></div>
+                      {/* <div className="navigate-sec1"><a onClick={onAddClick}>CONTACT</a></div> */}
                     </div>
-                    <div className="navigate-links">
+                    {/* <div className="navigate-links">
                       {footerProp.attributes.navigateLinksRight.map((value, index) => (
                         <div className="navigate-sec1" key={`right${index}`}>
                           <a href={value.URL} key={`right-links${index}`}>{value.Label}</a>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                   <div className="connect-wrap">
                     <div className="footer-icons">
@@ -181,52 +181,21 @@ const Footer = ({ footerProp }) => {
               </div>
               <div className="footer-images-wrap">
                 <div className="footer-images">
-                  {footerProp.attributes.featuredImages.map((fImage, index) => (
+                  {footerProp.attributes.FooterFeaturedImages.map((fImage, index) => (
                     <a href={fImage.URL} className="footer-img" key={`featuredImages${index}`}>
                       <div className="featured-img">
                         <Image
                           loader={myLoader}
                           src={getStrapiMedia(
-                            fImage.Hero
+                            fImage.Image
                           )}
                           key={`featuredImage${index}`}
                           layout="fill"
                           alt="footerImage"
                         />
                       </div>
-                      <div className="footer-logo-img">
-                        <Image
-                          loader={myLoader}
-                          src={getStrapiMedia(
-                            fImage.Logo
-                          )}
-                          key={`featuredImageLogo${index}`}
-                          layout="fill"
-                          alt="Logo"
-                        />
-                      </div>
                     </a>
                   ))}
-                  {/* <div className="footer-img">
-                    <Image
-                      loader={myLoader}
-                      src={getStrapiMedia(
-                        footerProp.attributes.firstFeaturedImage
-                      )}
-                      layout="fill"
-                      alt="footerImage"
-                    />
-                  </div>
-                  <div className="footer-img">
-                    <Image
-                      loader={myLoader}
-                      src={getStrapiMedia(
-                        footerProp.attributes.secondFeaturedImage
-                      )}
-                      layout="fill"
-                      alt="footerImage"
-                    />
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -241,113 +210,6 @@ const Footer = ({ footerProp }) => {
             </div>
           ))}
         </div>
-      </div>
-      <div ref={navRef} id="popover" className="main_popup hide">
-            <div className="custom_model">
-              <div className="custom_model_dialog">
-                  <div className="custom_model_content">
-                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
-                    <div className="Popup_wrap">
-                      <form onSubmit={handleSubmit}>
-                        <div className="contact-form">
-                          <h2>CONTACT US</h2>
-                          <div className="contact-form-label">
-                            <div className="form-item">
-                              <input
-                                placeholder="FIRST NAME" 
-                                type="text"
-                                value={fullname}
-                                onChange={(e) => {
-                                  setFullname(e.target.value);
-                                }}
-                                name="fullname"
-                                className="input-name contact-lebel"
-                              />
-                              {errors?.fullname && (
-                                <p className="error_msg">First name cannot be empty.</p>
-                              )}
-                            </div>
-                            <div className="form-item">
-                              <input
-                                placeholder="LAST NAME" 
-                                name="lastName"
-                                type="text"
-                                value={lastName}
-                                onChange={(e) => {
-                                  setlastName(e.target.value);
-                                }}
-                                className="contact-lebel"
-                              />
-                              {errors?.lastName && (
-                                <p className="error_msg">Last name cannot be empty.</p>
-                              )}
-                            </div>
-                          </div>
-                          <div className="contact-form-label">
-                            <div className="form-item">
-                              <input
-                                placeholder="EMAIL ADDRESS" 
-                                type="email"
-                                name="email"
-                                value={email}
-                                onChange={(e) => {
-                                  setEmail(e.target.value);
-                                }}
-                                className="input-name contact-lebel"
-                              />
-                              {errors?.email && (
-                                <p className="error_msg">Email cannot be empty.</p>
-                              )}
-                            </div>
-                            <div className="form-item">
-                              <input
-                                placeholder="PHONE" 
-                                type="tel"
-                                name="phone"
-                                pattern="[0-9]*"
-                                value={phone}
-                                onChange={handleChange}
-                                className="input-name contact-lebel"
-                                max-length="12"
-                              />
-                              {errors?.email && (
-                                <p className="error_msg">Phone number cannot be empty.</p>
-                              )}
-                            </div>
-                          </div>
-                          <div className="contact-form-label">
-                            <div className="form-item full-width">
-                              <textarea
-                                name="message"
-                                value={message}
-                                onChange={(e) => {
-                                  setMessage(e.target.value);
-                                }}
-                                className="form-message contact-lebel" rows="4" cols="50" placeholder="MESSAGE">
-                              </textarea>
-                            </div>
-                          </div>
-                          <div className="submit_btn_wrap">
-                            <button type="submit" >Submit</button>
-                          </div>
-                          <div className="final_msg_wrap">
-                            {showSuccessMessage && (
-                              <p className="thankyou_msg">
-                                Thank you for your message! A team member from Villazzo Realty will get back to you shortly.
-                              </p>
-                            )}
-                            {showFailureMessage && (
-                              <p className="error_msg">
-                                Please fill the form
-                              </p>
-                            )}
-                          </div>
-                        </div>
-                      </form>
-                    </div>  
-                  </div>
-              </div>
-            </div>
       </div>
     </>
   )
