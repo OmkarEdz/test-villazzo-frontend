@@ -8,6 +8,15 @@ import Link from 'next/link'
 import axios from 'axios'
 import Slider from 'react-slick';
 
+var HomeSlider = {
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots:false,
+  arrows: true,
+  autoplay: false,
+};
+
 var settings = {
   infinite: true,
   slidesToShow: 1,
@@ -30,6 +39,238 @@ const Home = ({
   return (
     <>
       <Header navigation={navigation} global={global} />
+
+      {/* homepage Slider section start here */}
+      <div className="home_banner_slider">
+        <Slider {...HomeSlider}>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner first_banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.FirstSlideImg})`}}>
+                <div className="banner_slide_cont_inner">
+                  <h1 className="banner_slide_head">{homepage.attributes.HomeSlider.FirstSlideHead}</h1>
+                  <p className="banner_slide_cont">{homepage.attributes.HomeSlider.FirstSlideContent}</p>
+                  <p className="contBtn inqury-btn"><a href={homepage.attributes.HomeSlider.FirstSlideLink}>FIND OUT MORE</a></p>
+                </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.SecSlideImg})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.SecSlideContent}</p>
+              </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.ThirdSlideImage})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.ThirdSlideContent}</p>
+              </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.FourthSlideImage})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.FourthSlideContent}</p>
+              </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.FifthSlideImage})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.FifthSlideContent}</p>
+              </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.SixthSlideImage})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.SixthSlideContent}</p>
+              </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.SeventhSlideImage})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.SeventhSlideContent}</p>
+              </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.EighthSlideImage})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.EighthSlideContent}</p>
+              </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.NinthSlideImage})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.NinthSlideContent}</p>
+              </div>
+            </div>
+          </div>
+          <div className="banner_slide_item">
+            <div className="banner_slide_item_inner" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeSlider.TenthSlideImage})`}}>
+              <div className="banner_slide_cont_inner">
+                <p className="banner_slide_mini_cont">{homepage.attributes.HomeSlider.TenthSlideContent}</p>
+              </div>
+            </div>
+          </div>
+        </Slider>
+
+        <div className="search_wrapper">
+          <p>SEARCH THE FINEST VILLA IN THE BEST LOCATION</p>
+          <form action="submit">
+            <input type="text" />
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      {/* homepage Slider section start here */}
+
+      {/* homepage MORE Villas section start here */}
+      <div className="mainContainer more_villas_wrap">
+        <h2 className="bookHead noMar">{homepage.attributes.MoreVillaSection.Heading}</h2>
+        <p className="bookDesc">{homepage.attributes.MoreVillaSection.Subheading}</p>
+        <p className="middleImg">
+          <Image
+            loader={myLoader}
+            src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.MoreVillaSection.Image}`}
+            layout="fill"
+            alt="Book Item"
+          />
+        </p>
+        <h4 className="botMiniHead">{homepage.attributes.MoreVillaSection.EndHeading}</h4>
+        <p className="bookMiniDesc">{homepage.attributes.MoreVillaSection.EndSubheading}</p>
+        <p className="contBtn inqury-btn"><a href="javascript:;">FIND OUT MORE</a></p>
+      </div>
+      {/* homepage MORE Villas section end here */}
+
+
+      {/* homepage Gaallery section start here */}
+      <div className="home_gallery_wrap">
+        <div className="gallery_row_first">
+          <div className="mini_col">
+            <div className="two_imgs">
+              <p className="col_img">
+                <Image
+                  loader={myLoader}
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeGallery.FirstRowImage1}`}
+                  layout="fill"
+                  alt="Book Item"
+                />
+              </p>
+              <p className="col_img">
+                <Image
+                  loader={myLoader}
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeGallery.FirstRowImage2}`}
+                  layout="fill"
+                  alt="Book Item"
+                />
+              </p>
+            </div>
+          </div>
+          <div className="mini_col grey_col">
+            <h3 className="col_head">{homepage.attributes.HomeGallery.FirstRowHead}</h3>
+            <p className="col_content">{homepage.attributes.HomeGallery.FirstRowContent}</p>
+            <p className="contBtn inqury-btn"><a href="javascript:;">FIND OUT MORE</a></p>
+          </div>
+          <div className="big_col">
+            <p className="col_img">
+              <Image
+                loader={myLoader}
+                src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeGallery.FirstRowImage3}`}
+                layout="fill"
+                alt="Book Item"
+              />
+            </p>
+          </div>
+        </div>
+        <div className="gallery_row_first">
+          <div className="big_col">
+            <p className="col_img">
+                <Image
+                  loader={myLoader}
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeGallery.SecRowImage1}`}
+                  layout="fill"
+                  alt="Book Item"
+                />
+              </p>
+          </div>
+          <div className="mini_col grey_col">
+            <h3 className="col_head">{homepage.attributes.HomeGallery.SecRowHead}</h3>
+            <p className="col_content">{homepage.attributes.HomeGallery.SecRowContent}</p>
+            <p className="contBtn inqury-btn"><a href="javascript:;">FIND OUT MORE</a></p>
+          </div>
+          <div className="mini_col">
+            <p className="col_img">
+                <Image
+                  loader={myLoader}
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.HomeGallery.SecRowImage2}`}
+                  layout="fill"
+                  alt="Book Item"
+                />
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* homepage Gaallery section end here */}
+
+
+      {/* homepage tabbing section start here */}
+      <div className="mainContainer tabbing_sec_wrapper">
+        <h2 className="bookHead noMar">{homepage.attributes.HomeTabbing.Heading}</h2>
+        <p className="bookDesc">{homepage.attributes.HomeTabbing.Content}</p>
+        <div className="tabbing_wrapper">
+          <ul>
+          {homepage.attributes.HomeTabs.map((item, index) => (
+            <li className={`tabbing_item item${index}`} key={`item${index}`}>
+              <div className="tabbing_item_icon">
+                <Image
+                    loader={myLoader}
+                    src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${item.TabImage}`}
+                    layout="fill"
+                    alt="Book Item"
+                />
+              </div>
+              <h4>{item.TabHead}</h4>
+            </li>
+          ))}
+          </ul>
+          <div className="tab_content">
+          {homepage.attributes.HomeTabs.map((tabitem, index) => (
+            <div className={`tab_content_item tab_item${index}`}>
+              <h4 className="tab_content_item_head">{tabitem.TabHead}</h4>
+              <p className="tab_content_item_content">{tabitem.TabContent}</p>
+            </div>
+          ))}
+          </div>
+        </div>
+        <p className="contBtn inqury-btn"><a href={homepage.attributes.HomeTabbing.ButtonLink}>FIND OUT MORE</a></p>
+      </div>
+      {/* homepage tabbing section start here */}
+
+
+      {/* homepage Inspiration section start here */}
+      <div className="mainContainer">
+        <h2 className="bookHead noMar">{homepage.attributes.Inspiration.Heading}</h2>
+        <p className="bookDesc">{homepage.attributes.Inspiration.content}</p>
+        <div className="insp_box_wrapper">
+          <a className="insp_box_item big_width" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage1})`}}>
+            <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent1}</span>
+          </a>
+          <a className="insp_box_item"  style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage2})`}}>
+            <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent2}</span>
+          </a>
+          <a className="insp_box_item"  style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage3})`}}>
+            <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent3}</span>
+          </a>
+          <a className="insp_box_item big_width" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage4})`}}>
+            <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent4}</span>
+          </a>
+        </div>
+      </div>
+      {/* homepage Inspiration section start here */}
+
 
       {/* homepage BOOK WITH VILLAZZO section start here */}
       <div className="mainContainer">

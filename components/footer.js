@@ -163,6 +163,7 @@ const Footer = ({ footerProp }) => {
                     </div> */}
                   </div>
                   <div className="connect-wrap">
+                    <p className="bottomLink"><a href="mailto:VILLAS@VILLAZZO.COM">VILLAS@VILLAZZO.COM</a></p>
                     <div className="footer-icons">
                       <p>CONNECT</p>
                       <div className="icons-wrap">
