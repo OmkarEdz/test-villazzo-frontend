@@ -5,7 +5,7 @@
   "scripts": {
     "develop": "next dev",
     "dev": "next dev",
-    "build": "next build",
+    "build": "CI=false next build",
     "start": "next start -H 0.0.0.0 -p $PORT",
     "start:dev": "next start",
     "export": "next build && next export",
