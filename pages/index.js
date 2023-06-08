@@ -36,6 +36,11 @@ const Home = ({
     return `${src}?w=${width}&q=${quality || 75}`
   }
 
+  function onhoverTabbng(event) {
+    document.getElementById('tabList').classList = '';
+    document.getElementById('tabList').classList.add('showTab' + event.target.getAttribute("data-id"));
+  }
+
   return (
     <>
       <Header navigation={navigation} global={global} />
@@ -121,7 +126,16 @@ const Home = ({
           <p>SEARCH THE FINEST VILLA IN THE BEST LOCATION</p>
           <form action="submit">
             <input type="text" />
-            <button type="submit"><i class="fas fa-search"></i></button>
+            <div className="locWrapper">
+              <ul>
+                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/aspen`}>Aspen</a></li>
+                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/miami`}>Miami</a></li>
+                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/saint-tropez`}>Saint-Tropez</a></li>
+                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/mykonos`}>Mykonos</a></li>
+                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/ibiza`}>Ibiza</a></li>
+              </ul>
+            </div>
+            <button type="submit"><i className="fas fa-search"></i></button>
           </form>
         </div>
       </div>
@@ -141,7 +155,7 @@ const Home = ({
         </p>
         <h4 className="botMiniHead">{homepage.attributes.MoreVillaSection.EndHeading}</h4>
         <p className="bookMiniDesc">{homepage.attributes.MoreVillaSection.EndSubheading}</p>
-        <p className="contBtn inqury-btn"><a href="javascript:;">FIND OUT MORE</a></p>
+        <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
       </div>
       {/* homepage MORE Villas section end here */}
 
@@ -172,7 +186,7 @@ const Home = ({
           <div className="mini_col grey_col">
             <h3 className="col_head">{homepage.attributes.HomeGallery.FirstRowHead}</h3>
             <p className="col_content">{homepage.attributes.HomeGallery.FirstRowContent}</p>
-            <p className="contBtn inqury-btn"><a href="javascript:;">FIND OUT MORE</a></p>
+            <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
           </div>
           <div className="big_col">
             <p className="col_img">
@@ -199,7 +213,7 @@ const Home = ({
           <div className="mini_col grey_col">
             <h3 className="col_head">{homepage.attributes.HomeGallery.SecRowHead}</h3>
             <p className="col_content">{homepage.attributes.HomeGallery.SecRowContent}</p>
-            <p className="contBtn inqury-btn"><a href="javascript:;">FIND OUT MORE</a></p>
+            <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
           </div>
           <div className="mini_col">
             <p className="col_img">
@@ -221,9 +235,10 @@ const Home = ({
         <h2 className="bookHead noMar">{homepage.attributes.HomeTabbing.Heading}</h2>
         <p className="bookDesc">{homepage.attributes.HomeTabbing.Content}</p>
         <div className="tabbing_wrapper">
-          <ul>
+          <ul id="tabList" className="showTab0">
           {homepage.attributes.HomeTabs.map((item, index) => (
-            <li className={`tabbing_item item${index}`} key={`item${index}`}>
+            <li className={`tabbing_item item${index}`} key={index} data-id={index}
+              onMouseEnter={(event)=>onhoverTabbng(event)}>
               <div className="tabbing_item_icon">
                 <Image
                     loader={myLoader}
@@ -238,7 +253,7 @@ const Home = ({
           </ul>
           <div className="tab_content">
           {homepage.attributes.HomeTabs.map((tabitem, index) => (
-            <div className={`tab_content_item tab_item${index}`}>
+            <div className={`tab_content_item tab_item${index}`} key={index}>
               <h4 className="tab_content_item_head">{tabitem.TabHead}</h4>
               <p className="tab_content_item_content">{tabitem.TabContent}</p>
             </div>
@@ -270,7 +285,6 @@ const Home = ({
         </div>
       </div>
       {/* homepage Inspiration section start here */}
-
 
       {/* homepage BOOK WITH VILLAZZO section start here */}
       <div className="mainContainer">
@@ -313,7 +327,7 @@ const Home = ({
             <p className="bookItemDesc">{homepage.attributes.bookVillazzoSection.BookItemContent3}</p>
           </div>
         </div>
-        <p className="contBtn inqury-btn"><a href="javascript:;">FIND OUT MORE</a></p>
+        <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
       </div>
       {/* homepage BOOK WITH VILLAZZO section end here */}
 
@@ -323,19 +337,19 @@ const Home = ({
           <h3>{homepage.attributes.HomepageTestimonials.Heading}</h3>
           <Slider {...settings}>
             <div className="slideItem">
-              "{homepage.attributes.HomepageTestimonials.ClientReview1}"
+              {homepage.attributes.HomepageTestimonials.ClientReview1}
             </div>
             <div className="slideItem">
-              "{homepage.attributes.HomepageTestimonials.ClientReview2}"
+              {homepage.attributes.HomepageTestimonials.ClientReview2}
             </div>
             <div className="slideItem">
-              "{homepage.attributes.HomepageTestimonials.ClientReview3}"
+              {homepage.attributes.HomepageTestimonials.ClientReview3}
             </div>
             <div className="slideItem">
-              "{homepage.attributes.HomepageTestimonials.ClientReview4}"
+              {homepage.attributes.HomepageTestimonials.ClientReview4}
             </div>
             <div className="slideItem">
-              "{homepage.attributes.HomepageTestimonials.ClientReview5}"
+              {homepage.attributes.HomepageTestimonials.ClientReview5}
             </div>
           </Slider>
         </div>

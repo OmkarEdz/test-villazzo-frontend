@@ -497,7 +497,7 @@ color:#212529;
   position: relative;
   padding-bottom: 60px;
 }
-.footer-sec1 .toll-wrap p:last-child, .footer-sec1 .toll-wrap p:nth-last-child(2) {display: none;}
+/* .footer-sec1 .toll-wrap p:last-child, .footer-sec1 .toll-wrap p:nth-last-child(2) {display: none;} */
 .connect-wrap {position: absolute;bottom: 0px;left: 0px;display: flex;align-items: baseline;width: 100%;}
 .toll-wrap {
   margin: 0px;
@@ -957,25 +957,41 @@ h3.propertytxt {
 .search_wrapper form input:focus {outline: 0px;}
 .search_wrapper form button {background: transparent;border: 0px;position: absolute;right: 0px;top:-2px;}
 .search_wrapper form button:hover {color: #f8de7f;}
+.locWrapper {display:none;position: absolute;background: #fff;right: 0px;width: calc(100% - 10px);list-style: none;margin: 0px;box-shadow: 0px 0px 10px 0px #ccc;}
+.locWrapper ul {list-style: none;margin: 0px;padding: 0px;}
+.locWrapper ul li a {transition: 0.5s all; width: 100%;display: block;padding: 10px 15px;line-height: 1;text-decoration: none;color: #000;}
+.locWrapper ul li a:hover {color: #f8de7f;}
+.search_wrapper form input:focus ~ .locWrapper {display: block;}
 
 /* Home Tabs section start here */
 .mainContainer.tabbing_sec_wrapper {max-width: 1200px;}
 .tabbing_sec_wrapper .bookHead {max-width: 750px;margin: auto !important;}
 .tabbing_sec_wrapper .bookDesc {max-width: 750px;margin: 10px auto 30px;font-size: 16px;}
-.tabbing_wrapper ul {margin: 0px;padding: 0px;list-style: none;display: flex;align-items: flex-start;justify-content: space-evenly;}
-.tabbing_wrapper ul .tabbing_item {padding: 20px 10px;flex: 1;cursor: pointer;}
-.tabbing_item h4 {font-size: 16px;font-family: 'Lato';margin: 0px;text-transform: capitalize;}
+.tabbing_wrapper ul {margin: 0px;padding: 0px;list-style: none;display: flex;align-items: stretch;justify-content: space-evenly;}
+.tabbing_wrapper ul .tabbing_item {padding: 20px 10px;flex: 1;cursor: pointer;position: relative;}
+.tabbing_item h4 {font-size: 16px;font-family: 'Lato';margin: 0px;text-transform: capitalize;padding-top: 10px;}
 .tab_content {border: solid #ccc;border-width: 2px 0px;padding: 20px;text-align: left;margin-bottom: 30px;}
-.tabbing_item_icon {width: 75px;height: 75px;padding: 20px;margin:0 auto 10px;overflow: hidden;border-radius: 50%;display: flex;align-items: center;justify-content: center;}
+.tabbing_item_icon {width: 75px;height: 75px;padding: 20px;margin:0 auto;overflow: hidden;border-radius: 50%;display: flex;align-items: center;justify-content: center;}
 .tabbing_wrapper ul .tabbing_item:hover .tabbing_item_icon {background-color: #f8de7f;}
 .tabbing_item_icon span, .tabbing_item_icon span img {position: unset !important;width:100% !important;}
 .tabbing_wrapper ul .tabbing_item:hover .tabbing_item_icon img {filter: brightness(10);}
 .tab_content_item {display: none;}
-.tab_content_item_head {font-family: 'Lato' !important;font-weight: 700 !important;font-size: 22px;}
-.tab_content_item_content {font-size: 18px;}
+.tab_content_item_head {font-family: 'Lato' !important;font-weight: 700 !important;font-size: 18px;}
+.tab_content_item_content {font-size: 16px;margin: 0px;}
 .mainContainer.tabbing_sec_wrapper .contBtn.inqury-btn {margin: 0px;}
-.item0:hover + .tab_item0, .item1:hover + .tab_item1, .item2:hover + .tab_item2, .item3:hover + .tab_item3, .item4:hover + .tab_item4
-.item5:hover + .tab_item5, .item6:hover + .tab_item6, .item7:hover + .tab_item7, .item8:hover + .tab_item8, .item9:hover + .tab_item9 {display: block;}
+#tabList.showTab0 ~ .tab_content .tab_item0, #tabList.showTab1 ~ .tab_content .tab_item1, #tabList.showTab2 ~ .tab_content .tab_item2, #tabList.showTab3 ~ .tab_content .tab_item3, #tabList.showTab4 ~ .tab_content .tab_item4,
+#tabList.showTab5 ~ .tab_content .tab_item5, #tabList.showTab6 ~ .tab_content .tab_item6, #tabList.showTab7 ~ .tab_content .tab_item7, #tabList.showTab8 ~ .tab_content .tab_item8, #tabList.showTab9 ~ .tab_content .tab_item9 {display: block;}
+#tabList.showTab0 .item0 .tabbing_item_icon, #tabList.showTab1 .item1 .tabbing_item_icon, #tabList.showTab2 .item2 .tabbing_item_icon, #tabList.showTab3 .item3 .tabbing_item_icon, #tabList.showTab4 .item4 .tabbing_item_icon,
+#tabList.showTab5 .item5 .tabbing_item_icon, #tabList.showTab6 .item6 .tabbing_item_icon, #tabList.showTab7 .item7 .tabbing_item_icon, #tabList.showTab8 .item8 .tabbing_item_icon, #tabList.showTab9 .item9 .tabbing_item_icon {background-color: #f8de7f;}
+#tabList.showTab0 .item0 .tabbing_item_icon img, #tabList.showTab1 .item1 .tabbing_item_icon img, #tabList.showTab2 .item2 .tabbing_item_icon img, #tabList.showTab3 .item3 .tabbing_item_icon img, #tabList.showTab4 .item4 .tabbing_item_icon img,
+#tabList.showTab5 .item5 .tabbing_item_icon img, #tabList.showTab6 .item6 .tabbing_item_icon img, #tabList.showTab7 .item7 .tabbing_item_icon img, #tabList.showTab8 .item8 .tabbing_item_icon img, #tabList.showTab9 .item9 .tabbing_item_icon img {filter: brightness(10);}
+.tabbing_wrapper ul .tabbing_item:after {content: '';position: absolute;transition: 0.5s all;width: 0px;height: 3px;background: #000;left: 0;bottom: -2px;}
+#tabList.showTab0 .tabbing_item.item0:after, #tabList.showTab1 .tabbing_item.item1:after, #tabList.showTab2 .tabbing_item.item2:after, #tabList.showTab3 .tabbing_item.item3:after, #tabList.showTab4 .tabbing_item.item4:after,
+#tabList.showTab5 .tabbing_item.item5:after, #tabList.showTab6 .tabbing_item.item6:after, #tabList.showTab7 .tabbing_item.item7:after, #tabList.showTab8 .tabbing_item.item8:after, #tabList.showTab9 .tabbing_item.item9:after {width: 100%;}
+
+
+
+
 /* Home Tabs section end here */
 
 /* Home testimonialssection */
