@@ -75,7 +75,7 @@ const Header = ({ navigation, global }) => {
             <div className="logo-wrap">
               <div className="villazzo-logo-wrap">
                 <div className="main-logo">
-                  <Link href=""><Image
+                  <Link href="" passHref><Image
                     loader={myLoader}
                     src={getStrapiMedia(global.attributes.siteLogo)}
                     alt="Image"
