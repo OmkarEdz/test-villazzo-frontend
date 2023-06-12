@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html>
         <Head>          
           {/* eslint-disable-next-line */}
-          <title>Miami Luxury Real Estate | Villazzo Realty</title>
+          <title> Miami Luxury Real Estate | Villazzo Realty </title>
         </Head>
         <body>
           <Main />
