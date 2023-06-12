@@ -20,17 +20,7 @@ const MyApp = ({ Component, pageProps }) => {
         <link
           rel="shortcut icon"
           href={getStrapiMedia(global.attributes.favicon)}
-        ></link>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-        ></link>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-        ></link>
+        />
       </Head>
       <GlobalContext.Provider value={global.attributes}>
         <Component {...pageProps} />
