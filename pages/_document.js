@@ -4,12 +4,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Body>
+        <body>
           <Main />
           <NextScript />
           {/*Below we add the modal wrapper*/}
           <div id="modal-root"></div>
-        </Body>
+        </body>
       </Html>
     )
   }
