@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 /* a {
   text-decoration: none;
 }
@@ -375,7 +374,7 @@ img {
   border:unset;
 }
 .navbar-light .navbar-nav .nav-item:hover .dropdown-menu > li {display: flex;width: max-content;align-items: center;}
-.dropdown-item {
+.navbar-light .navbar-nav .nav-item:hover .dropdown-menu .dropdown-item {
   padding:14px 10px;
   font-size:17px;
   /* border-bottom: solid 1px #f0e6c7; */
@@ -435,6 +434,10 @@ img {
 }
 .bg-light {
   background-color: #f8de7f !important;
+}
+.header > .navbar.bg-light {
+  background-color: #f8de7f !important;
+  padding: 0px;
 }
 .mb-inquiery {
   display: none;
