@@ -539,7 +539,6 @@ color:#212529;
 }
 .footer-icons {
   display: flex;
-  margin-top: 78px;
   align-items: center;
 }
 .footer-icons p {
@@ -1040,7 +1039,7 @@ h3.propertytxt {
 .mainContainer.more_villas_wrap .bookDesc {max-width: 85%;margin: auto;}
 .middleImg {margin: 15px 0px;}
 .middleImg span, .middleImg span img {position: unset !important;}
-.botMiniHead {font-family: 'Lato';font-weight: 400;font-size: 24px;}
+.botMiniHead {font-size: 40px;max-width: 73%;margin: 0 auto 10px;line-height: 90%;font-family: 'Gotham Light';}
 .bookMiniDesc {font-size: 15px;font-family: 'Lato';margin: 0px auto 30px;max-width: 74%;}
 
 
@@ -1080,7 +1079,6 @@ h3.propertytxt {
 
 @media (min-width: 1750px){
   body .footer-images, body .footer-img span, body .footer-img .featured-img img {height: 100% !important;}
-  body .footer-img .featured-img {height: 80%;}
   .navbar-expand-lg .navbar-nav li.nav-item:nth-child(2) {margin-right: 45px;}
   .navbar-expand-lg .navbar-nav li.nav-item:nth-child(3) {margin-right: 100px;}
   .navbar-expand-lg .navbar-nav li.nav-item:last-child {width: max-content;}
@@ -1100,7 +1098,6 @@ h3.propertytxt {
 @media only screen and (max-width: 1750px) {
   .footer-sec1 .toll-wrap, .footer-sec1 .toll-wrap p, .navigate-wrap p, .navigate-sec1 a, .toll-wrap a {font-size: 14px;}
   .navigate-sec1 {padding-bottom: 15px;}
-  .footer-icons {margin-top: 66px;}
   .sell-search-container.buy {width: 55%;}
   .icons-wrap a {font-size: 26px;}
   h3.propertytxt {font-size: 50px;}
@@ -1112,26 +1109,7 @@ h3.propertytxt {
   .selltxt {font-size: 20px;}
   .sell-btn a {line-height: 20px;font-size: 16px;width: 180px;}
   .icons-wrap a {padding: 0 7px;font-size: 20px;}
-  .footer-icons {margin-top: 45px;}
   .sell-search-container.buy {width: 80%;}
-
-  .new_dev_pg_wrap .buttons-wrap.video-wrapper.team-wrapper.dev-wrapper, .buttons-wrap.video-wrapper.team-wrapper.inside-wrap {width:1024px;}
-  .sold-heading, .video-heading, .sliderHeader, .team-heading {font-size: 50px;line-height: 50px;}
-  .pro-name {font-size: 24px;line-height: 32px;}
-  
-  .team_main_pg .buttons-wrap.video-wrapper.team-wrapper {width: 1050px;}
-  .meet-wrap {margin-top: 0px;}
-  .meet-left .meet-left-img, .meet-left:first-child .meet-left-img, .inside-wrap .meet-left:first-child .meet-left-img {margin: 0px auto 20px;}
-  .meet-left .meet-left-img span, .inside-wrap .meet-left .meet-left-img span {width: 180px !important;height: 180px !important;}
-  .meet-left-name {font-size: 24px;line-height: 32px;}
-  .broker, .number, .email {font-size: 20px;line-height: 28px;}
-
-  .heading-img {width: 60px;margin-top: -10px;height: 65px;}
-  .video_item_wrap, .video_item_wrap .youtubeIcon {height: 250px;}
-  .video-name {font-size: 24px;line-height: 32px;}
-  .video-content {font-size: 18px;line-height: 26px;}
-  .video-box {margin: 0 0 80px;}
-  .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {margin-top:0px;}
 
   .footer-sec1 .toll-wrap, .footer-sec1 .toll-wrap p, .navigate-wrap p, .navigate-sec1 a, .toll-wrap a {font-size: 13px;}
   .footer-links {padding-bottom: 40px;}
@@ -1139,30 +1117,21 @@ h3.propertytxt {
 
 @media only screen and (max-width: 1400px) {
   .bg-img {min-height: 700px;}
-  /* .villazzo-logo-wrap {width: 200px;} */
   .inquiry a.desktop-inquiry-call {font-size: 25px;margin-bottom: 0px;}
   .inqury-btn a {line-height: 20px;font-size: 16px;height: unset;}
   .buttons-wrap .sell-buy-rent-buttons {margin: 210px auto auto;}
   .toll-wrap a {font-size: 14px;}
-  .footer-icons {margin-top: 47px;}
-  .buy-search-box {margin: 40px 0 0;}
-  .search-button.icon-btn {padding: 12px 10px;width: 100%;}
-  .buy-search-box label, .form-control {font-size: 16px;}
-
-
 }
 
 @media only screen and (max-width: 1280px) {
   .navbar-expand-lg .navbar-nav {width: 980px;}
-  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 16px;line-height: 16px;padding: 14px 10px!important;}
+  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 16px;line-height: 16px;padding: 14px 25px!important;}
   .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {top: 10px;}
   .nav-item {width: auto;}
   .toll-wrap a {font-size: 12px;}
   .buy-search-box label, .form-control {font-size: 14px;}
   .inquiry-wrap {padding-top: 0px;}
   .sell-search-container.buy {width: 65%;}
-  /* .navbar-light .navbar-nav .nav-item:nth-child(2):hover .dropdown-menu {left:-60%;}
-  .navbar-light .navbar-nav .nav-item:nth-child(3):hover .dropdown-menu {left:-30%;} */
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1175,9 +1144,6 @@ h3.propertytxt {
   .text-navigate {
     font-size: 14px;
   }
-  .footer-icons {
-    margin-top: 47px;
-  }
   .icons-wrap a {
     font-size: 16px;
   }
@@ -1188,7 +1154,9 @@ h3.propertytxt {
     padding-left: 0px
   }
 
-  .villazzo-logo-wrap {width: 150px;}
+  .villazzo-logo-wrap {width: 270px;}
+  .villazzo-logo-wrap .main-logo {width: 100%;margin-left: 0px;}
+  .visit-text {margin-left: 0px;}
   .navbar-expand-lg .navbar-nav {width: 700px;}
   .nav-item {margin: 0;}
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 14px;line-height: 14px;}
@@ -1201,7 +1169,6 @@ h3.propertytxt {
   .footer-sec1 .toll-wrap p {margin-bottom: 15px;}
   .text-navigate {padding-bottom: 10px;margin-bottom: 10px;}
   .navigate-sec1 {padding-bottom: 15px;}
-  .footer-icons {margin-top: 24px;}
   .navigate-wrap {padding-right: 20px;}
   .navigate-links {padding-top: 5px;}
   h3.propertytxt {font-size: 30px;line-height: 20px;}
@@ -1223,45 +1190,14 @@ h3.propertytxt {
   .find-hotel a {font-size: 18px;line-height: 20px;}
   .find-hotel a:hover {color: #f47421;border-color: #f47421;}
 
-  .sliderHeader, .team-heading {font-size: 32px;line-height: 32px;margin: 40px 0px;}
-  .slider-wrapper .slick-slider {max-width: 80%;}
-  .slider-wrapper .slider-content .slider_content_para {font-size: 18px;line-height: 26px;}
-  .slider-wrapper .slick-next, .slider-wrapper .slick-prev {width: 15px;height: 30px;}
-  .slider-wrapper .slick-dots li:first-child button, .slider-wrapper .slick-dots li:last-child button {width: 8px;height: 8px;}
-  .slider-wrapper .slick-dots li button {width: 13px;height: 13px;}
-  .slider-wrapper .slick-dots li.slick-active button {width: 16px;height: 16px;}
-  .slider-wrapper .slick-prev {left: -50px;}
-  .slider-wrapper .slick-next {right: -50px;}
-  .slider-wrapper .slick-arrow {transition:0.5s all;}
-  .slider-wrapper .slick-arrow:hover {filter: brightness(0);}
-
-  .meet-wrap {margin-bottom: 30px;}
-  .team_main_pg .buttons-wrap.video-wrapper.team-wrapper {width: 100%;}
-  .meet-left-name {font-size: 20px;line-height: 26px;}
-  .broker, .number, .email {font-size: 16px;line-height: 24px;margin-bottom: 5px !important;}
-  .team_main_pg .inqury-btn a {width: unset;height: unset;}
-
-  .heading-img {width: 42px;margin-left: 7px;height: 38px;margin-top: -8px;}
-  .sold_pg_wrap .sold-btn a {margin-top: 0px !important;margin-bottom: 70px !important;}
- 
-  .inside-wrap .meet-wrap {margin-top: 0;}
-  .inside-wrap .team-heading {margin-bottom: 30px;}
-  .meet-right p {line-height: 30px;font-size: 20px;}
-  .inside-wrap .meet-left .meet-left-img span {width: 100% !important;height: 100% !important;}
-  .videos_pg_wrap .buttons-wrap.video-wrapper {width: 90%;}
-  .videos_pg_wrap .buttons-wrap.video-wrapper .video-heading {margin: 40px 0px;}
-
-  .video_item_wrap, .video_item_wrap .youtubeIcon {height: 200px;}
-  .video-name {font-size: 20px;line-height: 26px;}
-  .video-content {font-size: 16px;line-height: 20px;}
-
-  .property-box img {height: 240px !important;}
-  .sell-search-box .contact-btn a {padding: 12px 40px;line-height: 14px;font-size: 14px;width: unset;height: unset;}
-
-  .selltxt p, .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {line-height: 30px;font-size: 20px;}
-
-  /* .navbar-light .navbar-nav .nav-item:nth-child(2):hover .dropdown-menu {left:-75%;}
-  .navbar-light .navbar-nav .nav-item:nth-child(3):hover .dropdown-menu {left:-40%;} */
+  html {overflow-x: hidden;}
+  .gallery_row_first .big_col {width: calc(40% - 8px);margin: 4px;}
+  .gallery_row_first .mini_col {width: calc(30% - 8px);margin: 4px;}
+  .two_imgs .col_img:first-child {margin-bottom: 8px;}
+  .tabbing_wrapper {max-width: 90%;display: block;overflow-y: auto;margin: 0 auto 15px;}
+  .tab_content {margin-bottom: 15px;width: 1300px;}
+  .tabbing_wrapper ul {justify-content: flex-start;}
+  .tabbing_wrapper ul .tabbing_item {min-width: 130px;}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1282,7 +1218,6 @@ h3.propertytxt {
   .main-wrap {padding-left: 0px;}
   .navbar-expand-lg .navbar-nav {width: 90%;}
   .buttons-wrap .sell-buy-rent-buttons {width: 75%;}
-  .footer-icons {margin-top: 48px;}
   .footer-bottom {padding: 5px 0;}
   .year {padding: 5px 20px;width: auto;}
   .sell-search-container {max-width: 700px;width: 90% !important;}
@@ -1300,6 +1235,29 @@ h3.propertytxt {
 
   /* .navbar-light .navbar-nav .nav-item:nth-child(2):hover .dropdown-menu {left:-40%;}
   .navbar-light .navbar-nav .nav-item:nth-child(3):hover .dropdown-menu {left:-20%;} */
+  .mini_col.grey_col {padding:30px 20px;}
+  .mini_col.grey_col .col_head {font-size: 18px;}
+  .mini_col.grey_col .col_content {margin: 15px 0px 20px;}
+  .gallery_row_first .mini_col {width: calc(50% - 8px);margin: 4px;}
+  .gallery_row_first .big_col {width: calc(100% - 8px);margin: 4px;}
+  .gallery_row_first .big_col .col_img span img, .gallery_row_first .mini_col .col_img span img {max-height: 300px !important;}
+  .insp_box_item {width: calc(50% - 8px);min-height: 250px;margin: 4px;}
+  .insp_box_item.big_width {width: calc(100% - 8px);}
+  .bookHead {font-size: 35px;margin-bottom: 45px;}
+  .mainContainer.more_villas_wrap .bookHead.noMar, .homeTestiCotainer h3 {font-size: 35px;}
+  .mainContainer, .mainContainer.tabbing_sec_wrapper {margin: 80px auto;max-width: 90%;}
+  .homeTestiCotainer {max-width: 90%;}
+  .homeTestiCotainer .slick-slider {max-width: 100%;}
+  .insp_box_wrapper {margin: 0px -4px;}
+  .bottomLink {margin: 0px 0 0px 0px; width: 50%;}
+
+  .tabbing_item_icon {width: 60px;height: 60px;padding: 15px;}
+  .bookBoxeWrap {flex-wrap: wrap;margin-bottom: 30px;}
+  .bookItem {width: 50%;padding: 20px;}
+  .bookItemImg {height: 40px;}
+  .bookItemImg span {height: 100% !important;}
+  .bookItemImg span img {height: 100% !important;}
+  .tabbing_wrapper {max-width: 100%;}
 }
 
 @media only screen and (max-width: 991px) {
@@ -1435,35 +1393,13 @@ h3.propertytxt {
   .navigate-wrap {width: 50%;}
   .footer-images-wrap {width: 100%;padding-top: 20px;}
   .footer-images {padding-left: 0px;}
-  .footer-icons {margin-top: 30px;}
 
-  .new_dev_pg_wrap .buttons-wrap.video-wrapper.team-wrapper.dev-wrapper, .buttons-wrap.video-wrapper.team-wrapper.inside-wrap {width: 100%;}
-  .property-box {margin-bottom: 40px;}
-  .pro-name, .find-hotel a {font-size: 16px;line-height: 22px;}
-  .pro-text {font-size: 14px;line-height: 18px;}
-  .new_dev_pg_wrap .find-hotel a {margin-bottom: 50px;}
-  .new_dev_pg_wrap .video-btn.contact-btn a {margin-top: 0px;}
-
-  .team_main_pg .team-heading.team {margin-bottom:20px;margin-top:30px;}
-  .meet-left.main-team {margin: 20px 0px;}
-  .meet-left .meet-left-img span {width: 140px !important;height: 140px !important;} 
-  .meet-left-name {font-size: 18px;line-height: 22px;}
-  .broker, .number, .email {font-size: 14px;line-height: 20px;margin-bottom: 5px !important;}
-  .team_main_pg .find-hotel a {margin: 0 auto 50px;}
-  .team_main_pg .inqury-btn.contact-btn a {margin-bottom: 30px;padding: 10px;}
-  .meet-right p {line-height: 24px;font-size: 16px;}
-
-  .inside-wrap .team-heading {font-size: 28px;line-height: 28px;padding-bottom: 20px;}
-  .inside-wrap .find-hotel a {margin: 0 auto 50px;}
-  .inside-wrap .team-heading {margin-top: 30px;}
-
-  .videos_pg_wrap .buttons-wrap.video-wrapper {width: 100%;}
-  .video-box {margin: 0 0 50px;}
-  .video_item_wrap, .video_item_wrap .youtubeIcon {height: 180px;}
-  .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {padding: 10px 40px;width: auto;height: auto;}
-  .video-name {font-size: 18px;line-height: 24px;}
-
-  .selltxt p, .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {line-height: 24px;font-size: 16px;}
+  .mainContainer, .mainContainer.tabbing_sec_wrapper {margin: 50px auto;}
+  .mainContainer.more_villas_wrap .bookHead.noMar {max-width: 100%;}
+  .mainContainer.more_villas_wrap {max-width: 90%;}
+  .first_banner_slide_item_inner .banner_slide_cont_inner {max-width: 70%;min-width: auto;}
+  .banner_slide_head {font-size: 35px;line-height: 1.2;}
+  .banner_slide_cont {font-size: 14px;max-width: 100%;}
 }
 
 @media only screen and (max-width: 768px) {
@@ -1475,44 +1411,7 @@ h3.propertytxt {
   }
   .row > div {margin: 5px 0px;}
   .row > div.search-icon-box {margin-top: 30px;}
-  .sell-search-box {width: 100%;max-width: 460px;}
-  .selltxt p {max-width: 100%;}
-
-  .sold-heading, .video-heading, .team_main_pg .team-heading.team {font-size: 28px;line-height: 28px;margin-top: 30px;}
-  .img_Wrap {margin-bottom: 15px;}
-  .property-wrap {margin-top: 30px;}
-  .property-box, .sold-by-wrapper .property-box {margin-bottom: 50px;width: 49%;}
-  .new_dev_pg_wrap .video-btn.contact-btn a {margin-top: 30px;}
-  .sliderHeader {font-size: 28px;line-height: 28px;margin: 30px 0px;}
-  .slider-wrapper .slider-content .slider_content_para {font-size: 16px;line-height: 22px;}
-
-  .meet-wrap:before, .meet-wrap:after {display: none;}
-  .meet-left.main-team {width: 48%;}
-
-  .team_main_pg .desktop {display: none !important;}
-  .team_main_pg .mobile {display: block !important;}
-
-  .inside-wrap .meet-wrap {flex-direction: column;margin: 0;}
-  .bg-white .inside-wrap .meet-left {width: 100%;padding-right: 0px;margin: 0px;}
-  .inside-wrap .meet-left .meet-left-img span {width: 140px !important;height: 140px !important;} 
-  .meet-right {width: 100%;padding-top: 30px;padding-right: 0px;}
-  .meet-right p {text-align: justify;}
-
-  .video_item_wrap:before {font-size: 40px;}
-  .soon_title {margin: 100px 0px !important;font-size: 24px;line-height: 24px;}
-
-  .custom_model_content {padding:30px;width: 70%;padding:25px;}
-  .contact-form h2 {padding-bottom: 10px;font-size: 30px;}
-  .contact-lebel {font-size: 16px;}
-  .contact-lebel::placeholder {font-size:14px;}
-  .submit_btn_wrap button {font-size:16px;}
-  .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {margin: 20px 0 0;padding: 10px;}
-  .model_close {right: 10px;top: 10px;font-size: 20px;color: #000;}
-
-  .contact-form-label {flex-wrap:wrap;}
-  .form-item {width:100%;}
-
-  .property-box img {height: 250px !important;}
+  .main-logo img {width: 80% !important;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -1521,6 +1420,11 @@ h3.propertytxt {
   .video_item_wrap {margin-bottom: 15px;}
   .search-button.icon-btn {display: none;}
   .search-icon-box .search-button.for-mobile {width: 100%;display: block;}
+  .home_banner_slider .slick-arrow {width: 40px;height: 40px;}
+  .home_banner_slider .slick-arrow.slick-prev {left: 30px;}
+  .home_banner_slider .slick-arrow.slick-next {right: 30px;}
+  .home_banner_slider .slick-arrow:before {font-size: 16px;}
+  .first_banner_slide_item_inner .banner_slide_cont_inner {max-width: 70%;min-width: auto;}
 }
 
 @media only screen and (max-width: 580px) {
@@ -1585,18 +1489,14 @@ h3.propertytxt {
     padding-top:0px;
         padding-bottom: 10px;
   }
-  .footer-images {
-    flex-direction: column;
-  }
   .footer-img .featured-img {
-    height: 200px;
+    height: 100%;
   }
   .footer-img .featured-img img {
-    height: 280px !important;
+    height: 100% !important;
   }
   .footer-img {
-    width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .main-logo {
     width: 160px;
@@ -1643,6 +1543,7 @@ h3.propertytxt {
   }
   .year {
     width: 35%;
+    padding: 5px 10px;
   }
   .year a {
     font-size: 10px;
@@ -1703,65 +1604,24 @@ h3.propertytxt {
     border:none !important;
   }
 
-  .search-button {font-size: 12px;}
-  .footer-page-links {flex-wrap: wrap;}
-  .year {width: 100%;padding: 3px 20px;}
-  .buttons-wrap .sell-buy-rent-buttons {margin: 180px auto auto;}
-  .navbar-expand-lg .navbar-nav {width: 100%;}
-  h3.propertytxt {margin: 0 0 10px;font-size: 22px;line-height: 30px;}
-  .selltxt {font-size: 14px;line-height: 24px;}
-  .buy-search-box {padding: 15px 20px;}
-  .buy-search-box label {font-size: 12px;}
-  .form-control{font-size: 16px;}
-  .visit-text {display: none;}
-  .sell-btn a {margin: 0 auto;width: 140px;}
-  #output {font-size: 14px;}
-  .buy-search-box .form-control {padding: 7px 15px;height: 40px;font-size: 16px;}
-  .prop_type:after {right: 25px;bottom: 8px;}
-  .buy-search-box label ~ div {margin-top:10px;}
-
-  .sold-heading, .video-heading, .team_main_pg .team-heading.team, .inside-wrap .team-heading {font-size: 24px;line-height: 24px;}
-  .property-wrap {margin-top: 30px;}
-  .pro-name, .find-hotel a {font-size: 14px;line-height: 18px;}
-  .property-box {margin-bottom: 40px;}
-
-  .slider-wrapper .slick-slider {max-width: 85%;}
-  .slider-wrapper .slick-prev {width: 10px;height: 20px;left: -20px;}
-  .slider-wrapper .slick-next {width: 10px;height: 20px;right: -20px;}
-  .slider-wrapper .slick-dots li:first-child button, .slider-wrapper .slick-dots li:last-child button {width: 6px;height: 6px;}
-  .slider-wrapper .slick-dots li button {width: 10px;height: 10px;padding: unset;}
-  .slider-wrapper .slick-dots li.slick-active button {width: 14px;height: 14px;}
-
-  .new_dev_pg_wrap .video-btn.contact-btn a, .inside-wrap .video-btn.contact-btn a, .read-reviews a {padding: 10px;}
-
-  .meet-left.main-team {width: 100%;}
-  .team_main_pg .inqury-btn.contact-btn {order:unset;width: unset;}
-  .team_main_pg .find-hotel {width: 100%;}
-  .team_main_pg .team-heading.team {margin-bottom: 10px;}
-
-  .heading-img {width: 36px;height: 34px;}
-  .sold_pg_wrap .sold-btn a {margin-bottom: 50px !important;}
-  .inside-wrap .team-heading {padding-bottom: 15px;margin-bottom: 15px;}
-
-  .videos_pg_wrap .buttons-wrap.video-wrapper {max-width: 320px;}
-  .videos_pg_wrap .buttons-wrap.video-wrapper .video-heading {margin: 30px 0px;}
-  .video_item_wrap, .video_item_wrap .youtubeIcon {height: 160px;}
-  .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {padding:10px 20px;line-height: 1;font-size: 14px;font-weight: bold;letter-spacing: 1px;}
-  .soon_title {font-size: 20px;line-height: 20px;}
-
-  .custom_model_content {width: 90%;}
-  .contact-lebel::placeholder {font-size:12px;}
-  .contact-form h2 {padding-bottom: 5px;font-size: 26px;}
-  .error_msg {font-size: 12px;}
-
-  .video-modal .custom_model_dialog iframe {width: 100%;height: 200px;}
-  .video_item_wrap .youtubeIcon {font-size: 45px;}
-
-  .property-box img {height: 180px !important;}
-  .sell-search-container.buy {margin-bottom: 50px;}
-  .sell-search-box .contact-btn a {padding:10px;}
-  .footer-sec1 .toll-wrap p:nth-last-child(2) br ~ br {display:none;}
-  .buttons-wrap {position:relative;z-index:99;}
+  .mainContainer.more_villas_wrap .bookHead.noMar {font-size: 28px;}
+  .bookHead {font-size: 28px;margin-bottom: 38px;}
+  .homeTestiCotainer h3 {font-size: 28px;margin-bottom: 20px;line-height: 1.2;}
+  .gallery_row_first .mini_col {width: 100%;margin: 4px 0px;}
+  .mini_col.grey_col {padding: 40px;}
+  .contBtn.inqury-btn a {width: max-content;margin: auto;}
+  .gallery_row_first .big_col .col_img span img, .gallery_row_first .mini_col .col_img span img {max-height: 220px !important;}
+  .bookMiniDesc {font-size: 14px;max-width: 100%;}
+  .bookItem {width: 100%;padding: 20px 0px;}
+  .bookItemHead {min-height: auto;}
+  .footer-links {padding-bottom: 0;}
+  .homeTestiWrapper {padding: 60px 0px;}
+  .homeTestiCotainer .slideItem {font-size: 16px;}
+  .insp_box_item.big_width .insp_box_cont {max-width: 100%;}
+  .insp_box_item {width: 100%;min-height: 250px;margin: 4px 0px;}
+  .insp_box_item.big_width {width: 100%;}
+  .search_wrapper {padding: 10px 20px;flex-wrap: wrap;}
+  .search_wrapper p {margin: 0px 0px 10px;}
 }
 
 @media only screen and (max-width: 430px) {
@@ -1791,6 +1651,10 @@ h3.propertytxt {
   .footer-sec1 .toll-wrap p {font-size: 10px;margin-bottom: 15px;}
   .footer-sec1 .toll-wrap p strong {margin-bottom: 5px;}
   .footer-sec1 .toll-wrap p a {font-size: 10px;}
+
+  .footer-page-links {flex-direction: column;justify-content: center;align-items: center;}
+  .footer-images {flex-wrap: wrap;}
+  .footer-img {width: 100%;}
 }
 
 @media not all and (min-resolution:.001dpcm)
