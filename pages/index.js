@@ -196,7 +196,7 @@ const Home = ({
           <div className="mini_col grey_col">
             <h3 className="col_head">{homepage.attributes.HomeGallery.FirstRowHead}</h3>
             <p className="col_content">{homepage.attributes.HomeGallery.FirstRowContent}</p>
-            <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
+            <p className="contBtn inqury-btn"><a href="https://test.villazzo.com/about-luxury-villa-rentals/5-star-villahotel-service">FIND OUT MORE</a></p>
           </div>
           <div className="big_col">
             <p className="col_img">
@@ -280,16 +280,16 @@ const Home = ({
         <h2 className="bookHead noMar">{homepage.attributes.Inspiration.Heading}</h2>
         <p className="bookDesc">{homepage.attributes.Inspiration.content}</p>
         <div className="insp_box_wrapper">
-          <a className="insp_box_item big_width" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage1})`}}>
+          <a className="insp_box_item big_width" href="https://test.villazzo.com/blog/2021/06/the-best-cities-to-meet-people/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage1})`}}>
             <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent1}</span>
           </a>
-          <a className="insp_box_item"  style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage2})`}}>
+          <a className="insp_box_item" href="https://test.villazzo.com/blog/2021/06/where-to-find-the-most-beautiful-castles-in-europe/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage2})`}}>
             <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent2}</span>
           </a>
-          <a className="insp_box_item"  style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage3})`}}>
+          <a className="insp_box_item" href="https://test.villazzo.com/blog/2021/05/five-places-to-discover-greek-architecture/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage3})`}}>
             <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent3}</span>
           </a>
-          <a className="insp_box_item big_width" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage4})`}}>
+          <a className="insp_box_item big_width" href="https://test.villazzo.com/blog/2021/05/a-guide-to-cuban-culture-in-miami/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage4})`}}>
             <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent4}</span>
           </a>
         </div>

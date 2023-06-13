@@ -107,7 +107,7 @@ const Header = ({ navigation, global }) => {
                     </div>
                   </div>
                   <div className="visit-text-wrap favLink">
-                    <p><a href="#">FAVORITES <i className="fa fa-star"></i></a></p>
+                    <p><a href="https://test.villazzo.com/favourites">FAVORITES <i className="fa fa-star"></i></a></p>
                   </div>
                 </div>
               </div>
@@ -139,7 +139,7 @@ const Header = ({ navigation, global }) => {
                       </li>
                       <li>
                         <div className="inqury-btn">
-                          <a>CONTACT US</a>
+                          <a href="https://test.villazzo.com/about-luxury-villa-rentals/contact">CONTACT US</a>
                         </div>
                       </li>
                     </ul>
@@ -148,7 +148,7 @@ const Header = ({ navigation, global }) => {
               </div>
             </div>
             <div className="inqury-btn">
-              <a>INQUIRE</a>
+              <a href="https://test.villazzo.com/about-luxury-villa-rentals/contact">INQUIRE</a>
             </div>
           </div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light hideOnMob">
