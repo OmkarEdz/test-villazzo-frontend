@@ -26,6 +26,8 @@ const ContactForm = ({
   const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
   const [message, setMessage] = useState("");
 
   const onchange = event => {
@@ -106,6 +108,8 @@ const ContactForm = ({
       setlastName("");
       setEmail("");
       setPhone("");
+      setCheckIn("");
+      setCheckOut("");
       setMessage("");
 
       // setTimeout(() => {
@@ -121,6 +125,8 @@ const ContactForm = ({
       setlastName("");
       setEmail("");
       setPhone("");
+      setCheckIn("");
+      setCheckOut("");
       setMessage("");
   }
   return (
@@ -129,11 +135,10 @@ const ContactForm = ({
             <div className="custom_model">
               <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="Popup_wrap">
                       <form onSubmit={handleSubmit}>
                         <div className="contact-form">
-                          <h2>CONTACT US</h2>
                           <div className="contact-form-label">
                             <div className="form-item">
                               <input
@@ -169,21 +174,6 @@ const ContactForm = ({
                           <div className="contact-form-label">
                             <div className="form-item">
                               <input
-                                placeholder="EMAIL ADDRESS" 
-                                type="email"
-                                name="email"
-                                value={email}
-                                onChange={(e) => {
-                                  setEmail(e.target.value);
-                                }}
-                                className="input-name contact-lebel"
-                              />
-                              {errors?.email && (
-                                <p className="error_msg">Email cannot be empty.</p>
-                              )}
-                            </div>
-                            <div className="form-item">
-                              <input
                                 placeholder="PHONE" 
                                 type="tel"
                                 name="phone"
@@ -197,6 +187,47 @@ const ContactForm = ({
                                 <p className="error_msg">Phone number cannot be empty.</p>
                               )}
                             </div>
+                            <div className="form-item">
+                              <input
+                                placeholder="EMAIL ADDRESS" 
+                                type="email"
+                                name="email"
+                                value={email}
+                                onChange={(e) => {
+                                  setEmail(e.target.value);
+                                }}
+                                className="input-name contact-lebel"
+                              />
+                              {errors?.email && (
+                                <p className="error_msg">Email cannot be empty.</p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="contact-form-label">
+                            <div className="form-item">
+                              <input
+                                placeholder="CHECK IN" 
+                                type="date"
+                                name="checkIn"
+                                value={checkIn}
+                                className="input-name contact-lebel"
+                              />
+                              {errors?.checkIn && (
+                                <p className="error_msg">Check In cannot be empty.</p>
+                              )}
+                            </div>
+                            <div className="form-item">
+                              <input
+                                placeholder="CHECK OUT" 
+                                type="date"
+                                name="checkOut"
+                                value={checkOut}
+                                className="input-name contact-lebel"
+                              />
+                              {errors?.checkOut && (
+                                <p className="error_msg">Check Out cannot be empty.</p>
+                              )}
+                            </div>
                           </div>
                           <div className="contact-form-label">
                             <div className="form-item full-width">
@@ -206,12 +237,22 @@ const ContactForm = ({
                                 onChange={(e) => {
                                   setMessage(e.target.value);
                                 }}
-                                className="form-message contact-lebel" rows="4" cols="50" placeholder="MESSAGE">
+                                className="form-message contact-lebel" rows="4" cols="50" placeholder="COMMENTS">
                               </textarea>
                               {errors?.message && (
                                 <p className="error_msg">Message cannot be empty.</p>
                               )}
                             </div>
+                          </div>
+                          <div className="contact-form-label contact-form-label-footer">
+                            <div className="checkBoxWrap">
+                              <input type="checkbox" value="email-check" />
+                              Email me your monthly newsletter
+                            </div>
+                          </div>
+                          <div className="contact-form-label contact-form-label-footer">
+                            <p>Confirm that you are not a Robot:</p>
+                            <input type="text" className="" placeholder="What is 2+2 ?" />
                           </div>
                           <div className="submit_btn_wrap">
                             <button type="submit" >Submit</button>
@@ -234,7 +275,7 @@ const ContactForm = ({
                   </div>
               </div>
             </div>
-          </div>
+        </div>
       </>
   )
 }
